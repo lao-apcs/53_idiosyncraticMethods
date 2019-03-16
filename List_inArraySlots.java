@@ -48,8 +48,8 @@ public class List_inArraySlots {
      public boolean add( Object input){
         // expand when at max
         if (filledElements == list.length) expand();
-        
-        // create new instance using param and add 
+
+        // create new instance using param and add
         list[filledElements] = input;
 
         // update size
@@ -64,7 +64,6 @@ public class List_inArraySlots {
       preserving existing data.
      */
       private void expand() {
-          System.out.println( "expand... (for debugging)");
           Object[] storage = list; //store old list
           list = new Object[2 * filledElements]; //create new list
           for(int i = 0; i < filledElements; i++){ //repopulate with old values
